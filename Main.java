@@ -6,6 +6,9 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
         
+        System.out.println("debug mode? [true/false]");
+        boolean debugstatus = scanner.nextBoolean();
+
         System.out.println("hey, welcome to the guessing game");
         System.out.println("what will the max number to guess be?");
 
@@ -16,6 +19,13 @@ public class Main {
 
         System.out.println("okay, I have picked a number between 1 and " + max);
         System.out.println("now try to guess it!");
+
+              //debug stuff
+
+        if (debugstatus)
+        {
+            System.out.println("number is " + guessnumber);
+        }
 
         int guess = 0;
         int tries = 0;
@@ -48,6 +58,7 @@ public class Main {
                 scanner.nextLine();
                 scanner.close();
                 return;
+            
             }
         }
     }
